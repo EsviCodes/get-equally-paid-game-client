@@ -5,6 +5,24 @@ import testSketch from "../sketches/test-sketch";
 
 export default class Home extends Component {
   // onclick function to start rendering moneysketch
+  state = {
+    money: false
+  };
+
+  onClick = () => {
+    console.log("I'm clicked");
+    this.setState({
+      money: true
+    });
+  };
+
+  stopML = () => {
+    console.log("I'm clicked");
+    this.setState({
+      money: false
+    });
+  };
+
   render() {
     return (
       <div>
@@ -13,8 +31,17 @@ export default class Home extends Component {
           Let's begin{" "}
         </Link>
         {/* if button is clicked start rendering */}
-        <button>Machine Learning Money</button>
-        <P5Wrapper sketch={testSketch}></P5Wrapper>
+
+        {this.state.money ? (
+          <div>
+            <button onClick={this.stopML}>Stop</button>
+            <P5Wrapper sketch={testSketch}></P5Wrapper>
+          </div>
+        ) : (
+          <div>
+            <button onClick={this.onClick}>Machine Learning Money</button>
+          </div>
+        )}
       </div>
     );
   }

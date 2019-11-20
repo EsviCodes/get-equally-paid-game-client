@@ -1,45 +1,19 @@
 import * as ml5 from "ml5";
 
 export default function testSketch(p) {
-  // Add some header info
-  // For TM template code
-
-  console.log("ml5", ml5);
-
   // Video
   let video;
-
   let classifier;
-  let label = "waiting";
+  let label = "$$$";
 
   console.log("label", label);
 
   // STEP 1: Load the model! STEP 2: Start classifying
   p.preload = () => {
-    // images
-    // classifier = ml5.imageClassifier(
-    //   "https://teachablemachine.withgoogle.com/models/RtE5ECt6/model.json"
-    // );
-
-    //pose --> doesn't work
-    // classifier = ml5.imageClassifier(
-    //   "https://teachablemachine.withgoogle.com/models/zAFmVWDP/model.json"
-    // );
-
     // money images
     classifier = ml5.imageClassifier(
       "https://teachablemachine.withgoogle.com/models/sKAIhvKV/model.json"
     );
-
-    //   .then(classifier => {
-    //     console.log("classifier", classifier);
-    //     return classifier.classify(video);
-    //   })
-    //   .then(results => {
-    //     // the first object is always the one with the highest confidence score
-    //     console.log("results", results[0].label);
-    //   })
-    //   .catch(error => console.error(error));
   };
 
   p.setup = () => {
@@ -69,6 +43,16 @@ export default function testSketch(p) {
         classifyVideo();
       })
       .catch(error => console.error(error));
+
+    // stop rendering
+    p.button = p.createButton("Stop");
+    p.button.position(p.width / 2, 19);
+    p.button.mousePressed(stop);
+  };
+
+  const stop = () => {
+    console.log("STOP");
+    p.noLoop();
   };
 
   p.draw = () => {
@@ -83,13 +67,4 @@ export default function testSketch(p) {
     p.fill(255);
     p.text(label, p.width / 2, p.height - 16);
   };
-
-  // STEP 3: Get the classification!
-  //   const gotResults = (error, results) => {
-  //     if (error) {
-  //       console.error(error);
-  //       return;
-  //     }
-  //     console.log(results);
-  //   };
 }
