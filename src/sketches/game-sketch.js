@@ -1,7 +1,6 @@
 export default function gameSketch(p) {
   let resolution = 20;
   let money;
-  // Width and heigth
   let w;
   let h;
   let employee;
@@ -10,20 +9,15 @@ export default function gameSketch(p) {
     p.createCanvas(400, 400);
 
     // Due to the fact that we are scaling the employee, we need to scale the grid accordingly
-    console.log("width", p.width, "heigth", p.height);
-
     w = p.floor(p.width / resolution);
     h = p.floor(p.width / resolution);
 
-    console.log("w", w, "h", h);
-
-    // slow down the animation
+    // Slow down the animation due to scaling
     p.frameRate(5);
 
-    // employee
+    // Employee
     class Employee {
       constructor() {
-        // employee's body
         this.body = [];
 
         // employee starts in the middle of the game page
@@ -33,7 +27,7 @@ export default function gameSketch(p) {
         this.xdirection = 0;
         this.ydirection = 0;
 
-        // score
+        // Score
         this.payMen = 0;
         this.payWomen = 0;
       }
@@ -70,7 +64,6 @@ export default function gameSketch(p) {
       }
 
       grow = () => {
-        console.log("I'm fighting for equal pay");
         // Need to expand the array of the body of the employee
         let head = this.body[this.body.length - 1].copy();
         this.body.push(head);
@@ -84,7 +77,6 @@ export default function gameSketch(p) {
         let y = this.body[this.body.length - 1].y;
 
         if (x === location.x && y === location.y) {
-          console.log("Got the $$$");
           this.grow();
           return true;
         }
@@ -101,7 +93,6 @@ export default function gameSketch(p) {
     }
 
     employee = new Employee();
-    console.log("employee", employee);
 
     // Money
     moneyLocation();
@@ -161,7 +152,6 @@ export default function gameSketch(p) {
     employee.show();
 
     if (employee.endGame()) {
-      console.log("END GAME");
       p.background(255, 0, 0);
       p.fill(0);
 
