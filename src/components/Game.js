@@ -12,7 +12,6 @@ export default class Game extends Component {
           </div>
           <div className="rules">
             <h2>Rules of the Game</h2>
-            <p>This game is based on the classic Snake game</p>
             <p>The rules of this game are simple:</p>
             <ul>
               <li>
