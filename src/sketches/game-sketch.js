@@ -6,7 +6,7 @@ export default function gameSketch(p) {
   let employee;
 
   p.setup = () => {
-    p.createCanvas(400, 400);
+    p.createCanvas(500, 500);
 
     // Due to the fact that we are scaling the employee, we need to scale the grid accordingly
     w = p.floor(p.width / resolution);
@@ -86,7 +86,7 @@ export default function gameSketch(p) {
       show() {
         for (let i = 0; i < this.body.length; i++) {
           p.noStroke();
-          p.fill(255, 0, 0);
+          p.fill(13, 1, 48);
           p.rect(this.body[i].x, this.body[i].y, 1, 1);
         }
       }
@@ -133,13 +133,10 @@ export default function gameSketch(p) {
     // Background
     p.background(255, 254, 231);
     p.textSize(20);
+    p.fill(13, 1, 48);
     p.text(`Payment`, 10, 30);
     p.text(`Men: €${employee.payMen},-`, 10, 55);
     p.text(`Women: €${employee.payWomen},-`, 10, 75);
-
-    // Drawing of Riley
-    // stroke(0, 0, 0);
-    // Riley(61, 288, 55, 255, 238, 188, 255, 233, 225, 247, 156, 233, 90, 45);
 
     p.scale(resolution);
 
@@ -153,7 +150,7 @@ export default function gameSketch(p) {
 
     if (employee.endGame()) {
       p.background(255, 0, 0);
-      p.fill(0);
+      p.fill(13, 1, 48);
 
       // Message
       const message1 = "A new decade is knocking on our door";
@@ -171,8 +168,6 @@ export default function gameSketch(p) {
 
       p.fill(0, 102, 153);
 
-      // Drawing of Riley
-      p.stroke(0, 0, 0);
       // Game shuts down completley
       p.noLoop();
     } else {

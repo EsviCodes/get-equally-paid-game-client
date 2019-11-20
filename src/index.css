@@ -23,18 +23,22 @@ header {
   justify-content: center;
   padding: 50px;
   font-size: 20px;
-  /* background-color: #2d8177; */
 }
 
 .rules {
   max-width: 400px;
+  max-height: 400px;
   font-size: 20px;
-  padding-left: 50px;
+  padding: 50px;
+  margin-left: 50px;
   text-align: justify;
+  background-color: #fffee7;
+  border-radius: 10px;
+  border: 8px solid #85bb65;
 }
 footer {
   background-color: #0d0130;
-  color: #2d8177;
+  color: #ffcc00;
   position: absolute;
   bottom: 0;
   width: 100%;
