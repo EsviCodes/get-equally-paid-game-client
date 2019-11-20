@@ -4,7 +4,7 @@ export default function moneySketch(p) {
   // Video
   let video;
   let classifier;
-  let label = "$$$";
+  let label = "Waiting for the $$$";
 
   // STEP 1: Load the model! STEP 2: Start classifying
   p.preload = () => {
