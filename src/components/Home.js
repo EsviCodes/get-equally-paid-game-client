@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import P5Wrapper from "react-p5-wrapper";
+import testSketch from "../sketches/test-sketch";
 
 export default class Home extends Component {
   render() {
@@ -9,6 +11,7 @@ export default class Home extends Component {
           {" "}
           Let's begin{" "}
         </Link>
+        <P5Wrapper sketch={testSketch}></P5Wrapper>
       </div>
     );
   }
