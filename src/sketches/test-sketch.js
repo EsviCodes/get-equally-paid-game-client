@@ -16,9 +16,21 @@ export default function testSketch(p) {
 
   // STEP 1: Load the model! STEP 2: Start classifying
   p.preload = () => {
+    // images
+    // classifier = ml5.imageClassifier(
+    //   "https://teachablemachine.withgoogle.com/models/RtE5ECt6/model.json"
+    // );
+
+    //pose --> doesn't work
+    // classifier = ml5.imageClassifier(
+    //   "https://teachablemachine.withgoogle.com/models/zAFmVWDP/model.json"
+    // );
+
+    // money images
     classifier = ml5.imageClassifier(
-      "https://teachablemachine.withgoogle.com/models/RtE5ECt6/model.json"
+      "https://teachablemachine.withgoogle.com/models/sKAIhvKV/model.json"
     );
+
     //   .then(classifier => {
     //     console.log("classifier", classifier);
     //     return classifier.classify(video);
@@ -44,7 +56,7 @@ export default function testSketch(p) {
   const classifyVideo = () => {
     classifier
       .then(classifier => {
-        console.log("classifier", classifier);
+        //console.log("classifier", classifier);
         return classifier.classify(video);
       })
       .then(results => {
@@ -52,6 +64,8 @@ export default function testSketch(p) {
         //console.log("results", results[0].label);
         label = results[0].label;
         console.log("label", label);
+
+        // call function again so it keeps classifying
         classifyVideo();
       })
       .catch(error => console.error(error));
