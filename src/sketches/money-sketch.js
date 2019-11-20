@@ -1,12 +1,10 @@
 import * as ml5 from "ml5";
 
-export default function testSketch(p) {
+export default function moneySketch(p) {
   // Video
   let video;
   let classifier;
   let label = "$$$";
-
-  console.log("label", label);
 
   // STEP 1: Load the model! STEP 2: Start classifying
   p.preload = () => {
@@ -17,7 +15,7 @@ export default function testSketch(p) {
   };
 
   p.setup = () => {
-    p.createCanvas(640, 520);
+    p.createCanvas(600, 450);
     // Create the video
     video = p.createCapture(p.VIDEO);
     video.hide();
@@ -43,28 +41,18 @@ export default function testSketch(p) {
         classifyVideo();
       })
       .catch(error => console.error(error));
-
-    // stop rendering
-    p.button = p.createButton("Stop");
-    p.button.position(p.width / 2, 19);
-    p.button.mousePressed(stop);
-  };
-
-  const stop = () => {
-    console.log("STOP");
-    p.noLoop();
   };
 
   p.draw = () => {
-    p.background(0);
+    p.background(133, 187, 101);
 
     // Draw the video
     p.image(video, 0, 0);
 
     // STEP 4: Draw the label
-    p.textSize(32);
+    p.textSize(30);
     p.textAlign(p.CENTER, p.CENTER);
     p.fill(255);
-    p.text(label, p.width / 2, p.height - 16);
+    p.text(label, p.width / 2, p.height - 20);
   };
 }
