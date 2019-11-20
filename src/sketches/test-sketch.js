@@ -66,7 +66,7 @@ export default function testSketch(p) {
         console.log("label", label);
 
         // call function again so it keeps classifying
-        //classifyVideo();
+        classifyVideo();
       })
       .catch(error => console.error(error));
   };
