@@ -11,13 +11,14 @@ class App extends Component {
       <div>
         <header>
           <h1>Get Equally Paid Game</h1>
-          <Link className="link" to="/">
-            Go Home
-          </Link>
-          <br></br>
-          <Link className="link" to="/closing-the-gap">
-            Learn more about closing the pay gap
-          </Link>
+          <div className="header">
+            <Link className="link" to="/">
+              Go Home
+            </Link>
+            <Link className="link" to="/closing-the-gap">
+              Learn more about closing the pay gap
+            </Link>
+          </div>
         </header>
         <Route path="/" exact component={Home} />
         <Route path="/get-equally-paid" exact component={Game} />
