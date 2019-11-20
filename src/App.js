@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { connect } from "react-redux";
 import Home from "./components/Home";
 import Game from "./components/Game";
@@ -12,14 +12,7 @@ class App extends Component {
       <div>
         <header>
           <h1>Get Equally Paid Game</h1>
-          <div className="header">
-            {/* <Link className="link" to="/">
-              Go Home
-            </Link>
-            <Link className="link" to="/closing-the-gap">
-              Learn more about closing the pay gap
-            </Link> */}
-          </div>
+          <div className="header"></div>
         </header>
         <Route path="/" exact component={Home} />
         <Route path="/get-equally-paid" exact component={Game} />
