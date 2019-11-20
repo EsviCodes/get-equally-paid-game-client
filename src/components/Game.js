@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import P5Wrapper from "react-p5-wrapper";
 import gameSketch from "../sketches/game-sketch";
 import { Link } from "react-router-dom";
-//import moneySketch from "../sketches/money-sketch";
 
 export default class Game extends Component {
   // onclick function to start rendering moneysketch
