@@ -3,11 +3,11 @@ body {
   background-image: url("https://pixabay.com/get/57e0d5464e55aa14f6d1867dda6d49214b6ac3e45656754b702f7ed092/money-1005476_1920.jpg");
   background-size: 1450px;
   background-repeat: repeat, no-repeat;
-  color: #2d8177;
+  color: #0d0130;
 }
 
 .link {
-  color: #2d8177;
+  color: #0d0130;
   margin: 10px;
 }
 
@@ -33,7 +33,7 @@ header {
   text-align: justify;
 }
 footer {
-  background-color: #344559;
+  background-color: #0d0130;
   color: #2d8177;
   position: absolute;
   bottom: 0;
