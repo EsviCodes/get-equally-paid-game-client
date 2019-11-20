@@ -61,12 +61,12 @@ export default function testSketch(p) {
       })
       .then(results => {
         // the first object is always the one with the highest confidence score
-        //console.log("results", results[0].label);
+        console.log("results", results);
         label = results[0].label;
         console.log("label", label);
 
         // call function again so it keeps classifying
-        classifyVideo();
+        //classifyVideo();
       })
       .catch(error => console.error(error));
   };
