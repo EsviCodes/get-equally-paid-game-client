@@ -15,6 +15,11 @@ header {
   height: 4.5rem; /* Footer height */
 }
 
+.headerLink {
+  text-decoration: none;
+  color: #0d0130;
+}
+
 .content {
   display: flex;
 
