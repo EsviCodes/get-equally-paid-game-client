@@ -1,9 +1,11 @@
 export default function gameSketch(p) {
   let resolution = 20;
   let money;
+  let employee;
+
+  // width and heigth
   let w;
   let h;
-  let employee;
 
   p.setup = () => {
     p.createCanvas(450, 450);
@@ -20,7 +22,7 @@ export default function gameSketch(p) {
       constructor() {
         this.body = [];
 
-        // employee starts in the middle of the game page
+        // Employee starts in the middle of the game page
         this.body[0] = p.createVector(p.floor(w / 2), p.floor(h / 2));
 
         // Directions of the employee
@@ -48,12 +50,12 @@ export default function gameSketch(p) {
       endGame() {
         let x = this.body[this.body.length - 1].x;
         let y = this.body[this.body.length - 1].y;
-        // End Game if employee hits the walls
+        // End Game if employee runs into the walls
         if (x > w - 1 || x < 0 || y > h - 1 || y < 0) {
           return true;
         }
 
-        // End Game if employee hits itself
+        // End Game if employee runs into his/herself
         for (let i = 0; i < this.body.length - 1; i++) {
           let partBody = this.body[i];
           if (partBody.x === x && partBody.y === y) {
@@ -64,7 +66,6 @@ export default function gameSketch(p) {
       }
 
       grow = () => {
-        // Need to expand the array of the body of the employee
         let head = this.body[this.body.length - 1].copy();
         this.body.push(head);
         this.payMen++;
@@ -94,7 +95,6 @@ export default function gameSketch(p) {
 
     employee = new Employee();
 
-    // Money
     moneyLocation();
   };
 
@@ -141,7 +141,7 @@ export default function gameSketch(p) {
 
     p.scale(resolution);
 
-    // employee
+    // Employee
     // If the money has been collected, create a new money location
     if (employee.collectMoney(money)) {
       moneyLocation();
@@ -149,6 +149,7 @@ export default function gameSketch(p) {
     employee.update();
     employee.show();
 
+    // End Game
     if (employee.endGame()) {
       p.background(255, 0, 0);
       p.fill(13, 1, 48);
@@ -159,8 +160,6 @@ export default function gameSketch(p) {
       const message3 = "However, a new decade is knocking on our";
       const message4 = "door and the gender pay gap still exists...";
       const message5 = "#stop #genderpaygap #equalpay";
-      //
-      // const message4 = "#stop #genderpaygap";
 
       p.textSize(1.4);
       p.text(message1, 1.5, 5);
