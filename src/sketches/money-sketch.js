@@ -30,6 +30,13 @@ export default function moneySketch(p) {
         // The first element in the array (object) is always the class with the highest confidence score
         label = results[0].label;
 
+        // Possible Results (label):
+        // 5 euro banknote
+        // 10 euro banknote
+        // 20 euro banknote
+        // 1 dollar banknote
+        // No money
+
         // Call function again so it keeps classifying after set up
         classifyVideo();
       })
