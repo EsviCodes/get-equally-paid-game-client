@@ -153,18 +153,22 @@ export default function gameSketch(p) {
       p.fill(13, 1, 48);
 
       // Message
-      const message1 = "A new decade is knocking on our door";
-      const message2 = "and we still have no equal pay...";
-      const message3 = "#stop #genderpaygap";
-      const message4 = "This is no game for us";
+      const message1 = "This is no game";
+      const message2 = "Unequal Pay is forbidden by law since 1980";
+      const message3 = "However, a new decade is knocking on our door";
+      const message4 = "and the gender pay gap still exists...";
+      const message5 = "#stop #genderpaygap #equalpay";
+      //
+      // const message4 = "#stop #genderpaygap";
 
       p.textSize(1.4);
-      p.text(message4, 1.5, 5);
+      p.text(message1, 1.5, 5);
 
       p.textSize(1);
-      p.text(message1, 1.5, 9);
-      p.text(message2, 1.5, 10);
-      p.text(message3, 1.5, 12);
+      p.text(message2, 1.5, 8);
+      p.text(message3, 1.5, 10);
+      p.text(message4, 1.5, 11);
+      p.text(message5, 1.5, 14);
 
       p.fill(0, 102, 153);
 
