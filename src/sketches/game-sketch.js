@@ -6,7 +6,7 @@ export default function gameSketch(p) {
   let employee;
 
   p.setup = () => {
-    p.createCanvas(500, 500);
+    p.createCanvas(450, 450);
 
     // Due to the fact that we are scaling the employee, we need to scale the grid accordingly
     w = p.floor(p.width / resolution);
@@ -155,8 +155,8 @@ export default function gameSketch(p) {
       // Message
       const message1 = "This is no game";
       const message2 = "Unequal Pay is forbidden by law since 1980";
-      const message3 = "However, a new decade is knocking on our door";
-      const message4 = "and the gender pay gap still exists...";
+      const message3 = "However, a new decade is knocking on our";
+      const message4 = "door and the gender pay gap still exists...";
       const message5 = "#stop #genderpaygap #equalpay";
       //
       // const message4 = "#stop #genderpaygap";
@@ -168,7 +168,7 @@ export default function gameSketch(p) {
       p.text(message2, 1.5, 8);
       p.text(message3, 1.5, 10);
       p.text(message4, 1.5, 11);
-      p.text(message5, 1.5, 14);
+      p.text(message5, 1.5, 15);
 
       p.fill(0, 102, 153);
 
