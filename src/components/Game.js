@@ -26,9 +26,12 @@ export default class Game extends Component {
   render() {
     return (
       <div>
-        <Link to="/money-value">
+        {/* <Link to="/money-value">
           <button onClick={this.onClick}>Ask machine the value of money</button>
-        </Link>
+        </Link> */}
+        <a href="https://vijftienprocent.nl/magazine/women-inc-zo-werkt-het/cover/">
+          <button>Read what you as employer can do (Dutch)</button>
+        </a>
         <div className="content">
           <div className="sketch">
             <P5Wrapper sketch={gameSketch}></P5Wrapper>
@@ -45,7 +48,7 @@ export default class Game extends Component {
               </li>
               <li>Don't get burned-out by running into the wall or yourself</li>
               <li>
-                The payment in the upperleft corner of the board keeps track of
+                The payment in the upper left corner of the board keeps track of
                 how much you've earned.
               </li>
             </ol>

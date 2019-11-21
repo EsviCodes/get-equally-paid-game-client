@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import moneySketch from "../sketches/money-sketch";
 import P5Wrapper from "react-p5-wrapper";
+import { Link } from "react-router-dom";
 
 export default class Money extends Component {
   render() {
     return (
       <div>
-        <a href="https://vijftienprocent.nl/magazine/women-inc-zo-werkt-het/cover/">
-          <button>Read what you as employer can do (Dutch)</button>
-        </a>
+        <h2>First, we check the value of banknotes</h2>
+        <Link className="link" to="/get-equally-paid">
+          <button>Start Game</button>
+        </Link>
         <br></br>
         <br></br>
         <P5Wrapper sketch={moneySketch}></P5Wrapper>

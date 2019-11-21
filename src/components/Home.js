@@ -21,7 +21,7 @@ export default class Home extends Component {
           <br></br>
           So...
         </p>
-        <Link className="link" to="/get-equally-paid">
+        <Link className="link" to="/money-value">
           <button>Let's play a game</button>
         </Link>
       </div>
