@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
-import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Home from "./components/Home";
 import Game from "./components/Game";
 import Money from "./components/Money";
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <div>
@@ -28,5 +27,3 @@ class App extends Component {
     );
   }
 }
-
-export default connect()(App);
