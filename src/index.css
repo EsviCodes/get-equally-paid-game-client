@@ -9,11 +9,6 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-.link {
-  color: #0d0130;
-  margin: 10px;
-}
-
 header {
   height: 4.5rem; /* Footer height */
   font-size: 20px;
@@ -22,6 +17,11 @@ header {
 .headerLink {
   text-decoration: none;
   color: #0d0130;
+}
+
+.footerLink {
+  text-decoration: none;
+  color: #fffee7;
 }
 
 .facts {
