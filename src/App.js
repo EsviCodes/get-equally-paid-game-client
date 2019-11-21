@@ -5,13 +5,16 @@ import Home from "./components/Home";
 import Game from "./components/Game";
 import Info from "./components/Info";
 import Money from "./components/Money";
+import { Link } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
       <div>
         <header>
-          <h1>Get Equally Paid Game</h1>
+          <Link className="headerLink" to="/">
+            <h1>Get Equally Paid Game</h1>
+          </Link>
           <div className="header"></div>
         </header>
         <Route path="/" exact component={Home} />
