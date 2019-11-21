@@ -16,6 +16,7 @@ body {
 
 header {
   height: 4.5rem; /* Footer height */
+  font-size: 20px;
 }
 
 .headerLink {
