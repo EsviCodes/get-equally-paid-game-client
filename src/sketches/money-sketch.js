@@ -1,14 +1,12 @@
 import * as ml5 from "ml5";
 
 export default function moneySketch(p) {
-  // Video
   let video;
   let classifier;
   let label = "Waiting for the $$$";
 
-  // STEP 1: Load the model! STEP 2: Start classifying
   p.preload = () => {
-    // money images
+    // Fetches the training model, returns a promise
     classifier = ml5.imageClassifier(
       "https://teachablemachine.withgoogle.com/models/sKAIhvKV/model.json"
     );
@@ -16,28 +14,23 @@ export default function moneySketch(p) {
 
   p.setup = () => {
     p.createCanvas(600, 450);
-    // Create the video
+
     video = p.createCapture(p.VIDEO);
     video.hide();
 
-    // STEP 2: Start classifying
     classifyVideo();
   };
 
-  // STEP 2 classify!
   const classifyVideo = () => {
     classifier
       .then(classifier => {
-        //console.log("classifier", classifier);
         return classifier.classify(video);
       })
       .then(results => {
-        // the first object is always the one with the highest confidence score
-        console.log("results", results);
+        // The first element in the array (object) is always the class with the highest confidence score
         label = results[0].label;
-        console.log("label", label);
 
-        // call function again so it keeps classifying
+        // Call function again so it keeps classifying after set up
         classifyVideo();
       })
       .catch(error => console.error(error));
@@ -49,7 +42,7 @@ export default function moneySketch(p) {
     // Draw the video
     p.image(video, 0, 0);
 
-    // STEP 4: Draw the label
+    // Draw the label
     p.textSize(30);
     p.textFont("Raleway");
     p.textAlign(p.CENTER, p.CENTER);
