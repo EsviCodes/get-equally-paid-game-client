@@ -10,7 +10,7 @@ body {
 }
 
 header {
-  height: 4.5rem; /* Footer height */
+  height: 4.5rem;
   font-size: 20px;
 }
 
@@ -55,8 +55,6 @@ button {
 
 .content {
   display: flex;
-
-  /* flex-direction: row; */
   align-items: center;
   justify-content: center;
   padding: 50px;
@@ -81,6 +79,7 @@ button {
   border-radius: 10px;
   border: 8px solid #0d0130;
 }
+
 footer {
   background-color: #0d0130;
   color: #fffee7;

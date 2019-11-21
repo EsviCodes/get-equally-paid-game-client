@@ -12,7 +12,7 @@ export default class Money extends Component {
         <br></br>
         <br></br>
         <Link className="link" to="/get-equally-paid">
-          <button>Start Game</button>
+          <button>Next: Start Game</button>
         </Link>
       </div>
     );
