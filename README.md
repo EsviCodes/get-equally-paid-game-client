@@ -1,5 +1,11 @@
 # Get Equally Paid Game
-Game based on the classic Snake Game to promote awareness of the gender pay gap in the Netherlands
+Story App with machine learning and a game element to promote equal pay.
+
+## Features
+- Home Page with equal pay facts in the Netherlands
+- Check the value of a banknote (works for 5 euro, 10 euro, 20 euro, 1 dollar, and neutral position) with machine learning
+- Game to re-enact working life (based on classic Snake Game)
+- Link to magazine with information to close the gender pay gap (target group: Dutch employers)
 
 ## Resources
 - [Teachable Machine](https://teachablemachine.withgoogle.com/)
