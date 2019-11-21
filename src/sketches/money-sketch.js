@@ -51,8 +51,9 @@ export default function moneySketch(p) {
 
     // STEP 4: Draw the label
     p.textSize(30);
+    p.textFont("Raleway");
     p.textAlign(p.CENTER, p.CENTER);
-    p.fill(255);
+    p.fill(255, 254, 231);
     p.text(label, p.width / 2, p.height - 20);
   };
 }
