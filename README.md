@@ -1,5 +1,5 @@
 # Get Equally Paid Game
-Game based on the classic Snake Game to promote awareness of the gender pay gap in the Netherlands
+Story App with machine learning and a game element to promote equal pay
 
 ## Resources
 - [Teachable Machine](https://teachablemachine.withgoogle.com/)
