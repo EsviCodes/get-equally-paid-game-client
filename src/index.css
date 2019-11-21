@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Cantata+One|Raleway&display=swap");
+
 body {
   text-align: center;
   background-image: url("https://pixabay.com/get/57e0d5464e55aa14f6d1867dda6d49214b6ac3e45656754b702f7ed092/money-1005476_1920.jpg");
   background-size: 1450px;
   background-repeat: repeat, no-repeat;
   color: #0d0130;
+  font-family: "Raleway", sans-serif;
 }
 
 .link {
