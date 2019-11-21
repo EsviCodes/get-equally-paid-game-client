@@ -134,6 +134,7 @@ export default function gameSketch(p) {
     p.background(255, 254, 231);
     p.textSize(20);
     p.fill(13, 1, 48);
+    p.textFont("Raleway");
     p.text(`Earnings`, 10, 30);
     p.text(`Men: €${employee.payMen},-`, 10, 55);
     p.text(`Women: €${employee.payWomen},-`, 10, 75);
